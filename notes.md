@@ -26,3 +26,15 @@ test_subject_test<-read.delim("UCI HAR Dataset/test/subject_test.txt",header=FAL
 Create source column in each using mutate and name with suffix m
 
 Repeat for Train
+
+---
+
+08.03.2015
+Create files of 3 train 'variables'.  Use read.delim but set column names and header to false. Do similar for test
+
+09.03.2015
+
+Clip together for train/test - resulting in two data.frames
+convert to tables so can use mutate and add a 'source' column to each
+Rename consistently
+rbind together
