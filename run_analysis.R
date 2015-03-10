@@ -6,7 +6,7 @@ library("tidyr")
 ## Create Clipped Train Data
 ## first read in files
 
-X_train<-read.delim("UCI HAR Dataset/train/X_train.txt", col.names="Measurements_Vector", header=FALSE)
+X_train<-read.table("UCI HAR Dataset/train/X_train.txt")
 Y_train<-read.delim("UCI HAR Dataset//train//y_train.txt", col.names="Activity_ID", header=FALSE)
 train_subject<-read.delim("UCI HAR Dataset//train//subject_train.txt", col.names="Subject_ID", header=FALSE)
 

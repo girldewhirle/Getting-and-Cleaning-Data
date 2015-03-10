@@ -38,3 +38,7 @@ Clip together for train/test - resulting in two data.frames
 convert to tables so can use mutate and add a 'source' column to each
 Rename consistently
 rbind together
+
+09.03.2015
+
+read.table, read.table, read.table
