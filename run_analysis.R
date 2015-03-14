@@ -56,7 +56,7 @@ subject_ID_train<-read.table("UCI HAR Dataset/train/subject_train.txt",col.names
 ## clip together in one dataset
 
 clipped_test_output<-cbind(subject_ID, activity_ID, X_vector)
-clipped_train_output<-cbind(subject_ID, activity_ID, X_vector)
+clipped_train_output<-cbind(subject_ID_train, activity_ID_train, X_vector_train)
 
 ## remove working files
 
@@ -70,9 +70,7 @@ clipped_test_output<-mutate(clipped_test_output,source="TEST")
 clipped_train_output<-mutate(clipped_train_output, source="TRAIN")
 ## combine the two data sets
 combined_data<-rbind(clipped_test_output, clipped_train_output)
-## remove working files
 
-rm(clipped_test_output,clipped_train_output)
 
 ## create table of activity labels
 
@@ -86,7 +84,20 @@ merged_data<-merge(activity_labels,combined_data,by.x="activity_ID",by.y="Activi
 
 merged_data$Activity_Label<-as.character(merged_data$Activity_Label)
 
+## tidy names slightly
+
+original<-colnames(merged_data)
+names_table<-tbl_df(data.frame(original))
+names_table<-mutate(names_table,next_name=gsub("[...]",original,replacement="_"))
+next_names<-names_table$next_name
+colnames(merged_data)<-next_names
+
 ## remove working files
 
+rm(clipped_test_output,clipped_train_output)
 rm(activity_labels,combined_data)
+rm(original, next_names, names_table)
 
+## wrap merged data
+
+merged_data<-tbl_df(merged_data)
