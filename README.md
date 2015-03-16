@@ -9,20 +9,29 @@ The run_analysis.R file is based on a working directory which contains the unzip
 
 The script creates a data set using the following files:
 
+Labels and Variable Names:
+
 UCI HAR Dataset/features.txt
 UCI HAR Dataset/activity_labels.txt
+
+Test Data:
 
 UCI HAR Dataset/test/X_test.txt
 UCI HAR Dataset/test/subject_test.txt
 UCI HAR Dataset/test/y_test.txt
 
-The script will load the following libraries:
+Train Data:
+
+UCI HAR Dataset/train/X_train.txt
+UCI HAR Dataset/train/subject_train.txt
+UCI HAR Dataset/train/y_train.txt
+
+The script has the following prereqs and will load the libraries:
 
 * plyr
 * dplyr
 * tidyr
 
-## starting point is that the UCI folder is unzipped in the root of the working directory
 ## convert the features file into a character vector
 ## first read it in as delimited NOT table. Header must be false else loose first value
 ## read in file for features - use read table to be able to split into columns
