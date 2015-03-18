@@ -5,17 +5,35 @@ date: "Monday, March 16, 2015"
 output: html_document
 ---
 
-<u>Variables</u>
+This code book contains details of the 81 variables included in the final output file.  For details of how the run_analysis.R script created the tidy output file please refer to the accompanying readme file.<br>
 
-<i>IDs</i>
+<u>Variables</u><br>
 
-Activity_Label_after_mean<br>
+<i>IDs</i><br>
+
+Activity_Label_after_mean<br><br>
 - Verbose description of Activity
 
-Subject_ID<br>
+Subject_ID<br><br>
 - ID of Subject carrying out activities
 
-<i>Vector Features</i>
+<i>Vector Features</i><br><br>
+- all vector features variables will be numeric.  They can be positive or negative.
+
+The following is extracted from the original 'features_info' file found in the data folder.<br>
+
+"<i>The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz.<br>
+
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag).<br>
+
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals).<br>
+
+These signals were used to estimate variables of the feature vector for each pattern:  
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.</i>"<br>
+
+Of the 561 features included in the original vector only the ones referencing the mean (including the mean frequency) or standard deviation are included.  They were selected by selecting variables which contained the string "mean" and/or "std".<br>
+
+<b>Each of the vector variables below follows the same naming convention which is detailed.</b></br>
 
 tBodyAcc_mean_X<br>
 - time domain
