@@ -53,6 +53,6 @@ The script is commented at each stage and follows the following process:
 * the activity labels are merged into this data extract
 * surprus columns (source, activity ID for example) are removed from the final_output
 * the working files created through the process are removed
-* the final_output file is written to the workspace.  Note - this is commented out in the script as has already been run to create the submitted file.  If it is uncommented the destination file (currently final_output) may need to be renamed
+* the final_output file is written to the workspace using write.table.  Note - this is commented out in the script as has already been run to create the submitted file.  If it is uncommented the destination file (currently final_output) may need to be renamed
 
 
