@@ -11,13 +11,13 @@ This code book contains details of the 81 variables included in the final output
 
 <i>IDs</i><br>
 
-Activity_Label_after_mean<br><br>
+Activity_Label_after_mean<br>
 - Verbose description of Activity
 
-Subject_ID<br><br>
+Subject_ID<br>
 - ID of Subject carrying out activities
 
-<i>Vector Features</i><br><br>
+<i>Vector Features</i><br>
 - all vector features variables will be numeric.  They can be positive or negative.
 
 The following is extracted from the original 'features_info' file found in the data folder.<br>
